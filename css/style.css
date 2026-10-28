@@ -41,6 +41,11 @@ header {
 
 #main-nav {
     width: 100%;
+    display: none;
+}
+
+#main-nav.open {
+    display: block;
 }
 
 #main-nav ul {
@@ -138,6 +143,7 @@ footer a {
 
     #main-nav {
         width: auto;
+        display: block;
     }
 
     #main-nav ul {
