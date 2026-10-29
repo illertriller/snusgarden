@@ -159,6 +159,40 @@ footer a {
     font-size: 1.2rem;
 }
 
+.filter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.filter-btn {
+    background-color: #8B5A2B;
+    color: #F5EFE3;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.garden {
+    padding: 40px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.bild-galleri {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.bild-galleri img {
+    border-radius: 6px;
+}
+
 
 
 @media (min-width: 768px) {
@@ -196,4 +230,8 @@ footer a {
         max-width: 900px;
         margin: 0 auto;
     }
+
+    .bild-galleri {
+    grid-template-columns: repeat(2, 1fr);
+    }   
 }
