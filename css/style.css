@@ -213,6 +213,11 @@ footer a {
     border-radius: 4px;
 }
 
+#felmeddelande {
+    color: #8B5A2B;
+    font-weight: 600;
+}
+
 @media (min-width: 768px) {
     #menu-btn {
         display: none;

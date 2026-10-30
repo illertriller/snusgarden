@@ -39,3 +39,39 @@ if (laggTillKnapp) {
         varukorg.appendChild(rad);
     });
 }
+
+const bestallForm = document.getElementById("bestall-form");
+
+if (bestallForm) {
+    bestallForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const namn = document.getElementById("namn").value.trim();
+        const epost = document.getElementById("epost").value.trim();
+        const alder = document.getElementById("alder").checked;
+        const felmeddelande = document.getElementById("felmeddelande");
+
+        let fel = [];
+
+        if (namn === "") {
+            fel.push("Fyll i ditt namn.");
+        }
+        if (epost === "" || !epost.includes("@")) {
+            fel.push("Fyll i en giltig e-postadress.");
+        }
+        if (varukorg.children.length === 0) {
+            fel.push("Lägg till minst ett snus i varukorgen.");
+        }
+        if (!alder) {
+            fel.push("Du måste vara över 18 år för att beställa.");
+        }
+
+        if (fel.length > 0) {
+            felmeddelande.textContent = fel.join(" ");
+        } else {
+            felmeddelande.textContent = "Tack för din beställning! Ett bekräftelsemejl är på väg.";
+            bestallForm.reset();
+            varukorg.innerHTML = "";
+        }
+    });
+}
