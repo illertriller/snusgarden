@@ -19,7 +19,7 @@ img {
 }
 
 .logo {
-    width: 50px;
+    width: 220px;
 }
 
 header {
@@ -126,7 +126,7 @@ header {
 footer {
     background-color: #2F4A3A;
     color: #F5EFE3;
-    text-align: center;
+    text-align: left;
     padding: 20px;
 }
 
@@ -242,10 +242,6 @@ footer a {
     .om-garden img {
         width: 50%;
         margin-bottom: 0;
-    }
-
-    .produkt-grid {
-        grid-template-columns: repeat(3, 1fr);
     }
 
     .produkt-grid {
