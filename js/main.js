@@ -1,3 +1,5 @@
+
+// Kollapsar och öppnar menyn i mobil
 const menuBtn = document.getElementById("menu-btn");
 const mainNav = document.getElementById("main-nav");
 
@@ -5,6 +7,7 @@ menuBtn.addEventListener("click", function () {
     mainNav.classList.toggle("open");
 });
 
+// Filter för snuset, alla, lös och portion
 const filterKnappar = document.querySelectorAll(".filter-btn");
 const produkter = document.querySelectorAll(".produkt");
 
@@ -22,6 +25,7 @@ filterKnappar.forEach(function (knapp) {
     });
 });
 
+// Varukorg, skapar lista
 const laggTillKnapp = document.getElementById("lagg-till");
 const varukorg = document.getElementById("varukorg");
 
@@ -40,6 +44,7 @@ if (laggTillKnapp) {
     });
 }
 
+// Beställnings formulär och validierings-formulär. Stoppar beställning om något saknas/är fel
 const bestallForm = document.getElementById("bestall-form");
 
 if (bestallForm) {
@@ -60,16 +65,16 @@ if (bestallForm) {
             fel.push("Fyll i en giltig e-postadress.");
         }
         if (varukorg.children.length === 0) {
-            fel.push("Lägg till minst ett snus i varukorgen.");
+            fel.push("Lägg till minst en snus i varukorgen.");
         }
         if (!alder) {
-            fel.push("Du måste vara över 18 år för att beställa.");
+            fel.push("Du måste vara över 18 år för att få beställa.");
         }
 
         if (fel.length > 0) {
             felmeddelande.textContent = fel.join(" ");
         } else {
-            felmeddelande.textContent = "Tack för din beställning! Ett bekräftelsemejl är på väg.";
+            felmeddelande.textContent = "Tack för din beställning! Ett bekräftelsemejl är på väg :)";
             bestallForm.reset();
             varukorg.innerHTML = "";
         }
