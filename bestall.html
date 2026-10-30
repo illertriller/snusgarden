@@ -27,7 +27,55 @@
     </header>
 
     <main>
+        <section class="bestall">
+            <h2>Så här beställer du</h2>
+            <ol>
+                <li>Välj de snus du vill ha och tryck på Lägg till.</li>
+                <li>Fyll i dina uppgifter.</li>
+                <li>Kryssa i att du är över 18 år (BankID-koll görs vid betalning).</li>
+                <li>Tryck på Skicka beställning när du är klar.</li>
+                <li>Du får sedan ett bekräftelsemejl med ett Swish-nummer.</li>
+                <li>Betala beloppet som står i mejlet.</li>
+                <li>Varorna levereras inom 2–3 dagar.</li>
+            </ol>
 
+            <h1>Beställ</h1>
+
+            <form id="bestall-form">
+            <label for="namn">Namn</label>
+            <input type="text" id="namn">
+
+            <label for="epost">E-post</label>
+            <input type="email" id="epost">
+
+            <label for="produkt">Snus</label>
+            <select id="produkt">
+                <option value="">Välj snus</option>
+                <option>E6:an, norrut!</option>
+                <option>Isvak</option>
+                <option>Löst-bös</option>
+                <option>Trippel-mayo</option>
+                <option>Norrsken!</option>
+                <option>En stor stark, tack!</option>
+            </select>
+
+            <label for="antal">Antal dosor</label>
+            <input type="number" id="antal" min="1">
+
+            <button type="button" id="lagg-till" class="btn">Lägg till</button>
+
+            <h2>Varukorg</h2>
+            <ul id="varukorg"></ul>
+
+            <label>
+                <input type="checkbox" id="alder"> Jag är över 18 år
+            </label>
+
+            <p id="felmeddelande"></p>
+
+            <button type="submit" class="btn">Skicka beställning</button>
+        </form>
+    </section>
     </main>
 
     <footer>

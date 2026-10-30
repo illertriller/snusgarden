@@ -193,7 +193,25 @@ footer a {
     border-radius: 6px;
 }
 
+.bestall {
+    padding: 40px 20px;
+    max-width: 500px;
+    margin: 0 auto;
+}
 
+#bestall-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#bestall-form input,
+#bestall-form select {
+    padding: 8px;
+    font-family: inherit;
+    border: 1px solid #2F4A3A;
+    border-radius: 4px;
+}
 
 @media (min-width: 768px) {
     #menu-btn {
